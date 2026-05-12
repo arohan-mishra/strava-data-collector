@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Configuration Error</h1>
+<p>The app is missing required environment variables:</p>
+<ul>
+{% for item in missing %}
+  <li>{{ item }}</li>
+{% endfor %}
+</ul>
+<p>Add them to your <code>.env</code> file locally or to your AWS environment variables after deployment.</p>
+{% endblock %}

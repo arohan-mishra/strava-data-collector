@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Privacy and Consent</h1>
+<p>By connecting your Strava account, you allow this prototype to read your activity data and save only selected running activity fields for analysis.</p>
+
+<h2>Purpose</h2>
+<p>The data will be used to demonstrate the feasibility of a data science project focused on recreational runner injury risk prevention.</p>
+
+<h2>Data minimisation</h2>
+<p>The app saves activity summary fields such as distance, moving time, elevation, start date, speed, heart rate and cadence where available. It does not save exact GPS coordinate arrays.</p>
+
+<h2>Voluntary participation</h2>
+<p>Participation is voluntary. You can stop before authorising Strava access.</p>
+
+<p><a href="{{ url_for('index') }}">Back to home</a></p>
+{% endblock %}

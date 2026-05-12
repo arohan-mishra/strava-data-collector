@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Thank you!</h1>
+<p>Your Strava connection worked successfully.</p>
+<p><strong>{{ run_count }}</strong> running activities were collected for analysis.</p>
+<p>Your anonymous participant ID is: <code>{{ participant_id }}</code></p>
+<p>You may now close this page.</p>
+{% endblock %}

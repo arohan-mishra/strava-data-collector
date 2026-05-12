@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Admin Export</h1>
+<p>Use these links with your admin password query parameter.</p>
+
+<p>Example:</p>
+<pre>/download/runs?password=your_admin_password</pre>
+
+<ul>
+  <li><a href="/download/runs?password=change-me">Download running activities CSV</a></li>
+  <li><a href="/download/athletes?password=change-me">Download athlete metadata CSV</a></li>
+</ul>
+
+<p>Replace <code>change-me</code> with your actual <code>ADMIN_PASSWORD</code>.</p>
+{% endblock %}

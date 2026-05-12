@@ -1,1 +1,7 @@
 .env
+__pycache__/
+*.pyc
+venv/
+.env.local
+data/*.csv
+.DS_Store

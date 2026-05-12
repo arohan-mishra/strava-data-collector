@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Runner Data Collector</h1>
+<p>This research prototype collects recent Strava running activity data for a student data science project on injury risk prevention in recreational runners.</p>
+
+{% if missing %}
+<div class="warning">
+  <strong>Configuration missing:</strong> {{ missing | join(', ') }}. Add these values to your .env file before using Strava OAuth.
+</div>
+{% endif %}
+
+<h2>What data will be collected?</h2>
+<ul>
+  <li>Running activity distance, time, pace, elevation and date</li>
+  <li>Heart rate and cadence if available from Strava</li>
+  <li>Basic Strava profile fields such as athlete ID and general location</li>
+</ul>
+
+<h2>What will not be collected?</h2>
+<ul>
+  <li>Exact GPS route coordinates are not saved in this app</li>
+  <li>Strava access tokens are not saved to CSV</li>
+  <li>Your data is used only for this assignment/project demonstration</li>
+</ul>
+
+<p>Please read the <a href="{{ url_for('privacy') }}">privacy and consent information</a> before continuing.</p>
+
+<a class="button" href="{{ url_for('connect') }}">Connect with Strava</a>
+{% endblock %}
